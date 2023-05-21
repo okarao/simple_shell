@@ -116,4 +116,9 @@ int is_delimeter(char, char *);
 int _isalpha(int);
 int _atoi(char *);
 
+/* builtin.c */
+int _shellexit(info_t *);
+int _customcd(info_t *);
+int _customhelp(info_t *);
+
 #endif
