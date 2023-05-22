@@ -123,8 +123,8 @@ int _customhelp(info_t *);
 
 /* builtin1.c */
 
-int _myhistory(info_t *);
-int _myalias(info_t *);
+int _customhistory(info_t *);
+int _customalias(info_t *);
 
 /* environ.c */
 char *_getenv(info_t *, const char *);
