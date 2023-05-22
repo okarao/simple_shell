@@ -133,4 +133,9 @@ int _customsetenv(info_t *);
 int _customunsetenv(info_t *);
 int populate_env_list(info_t *);
 
+/* errors.c*/
+void _customputs(char *);
+int _customputchar(char);
+int _putfd(char x, int fd);
+int _putsfd(char *text, int fd);
 #endif
