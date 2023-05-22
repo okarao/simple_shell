@@ -138,4 +138,12 @@ void _customputs(char *);
 int _customputchar(char);
 int _putfd(char x, int fd);
 int _putsfd(char *text, int fd);
+
+/* errors1.c */
+int _errortoi(char *);
+void print_error(info_t *, char *);
+int print_d(int, int);
+char *convert_number(long int, int, int);
+void remove_comments(char *);
+
 #endif
