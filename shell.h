@@ -121,4 +121,16 @@ int _shellexit(info_t *);
 int _customcd(info_t *);
 int _customhelp(info_t *);
 
+/* builtin1.c */
+
+int _myhistory(info_t *);
+int _myalias(info_t *);
+
+/* environ.c */
+char *_getenv(info_t *, const char *);
+int _customenv(info_t *);
+int _customsetenv(info_t *);
+int _customunsetenv(info_t *);
+int populate_env_list(info_t *);
+
 #endif
