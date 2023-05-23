@@ -146,4 +146,9 @@ int print_d(int, int);
 char *convert_number(long int, int, int);
 void remove_comments(char *);
 
+/*exits.c */
+char *_strncpy(char *, char *, int);
+char *_strncat(char *, char *, int);
+char *_strchr(char *, char);
+
 #endif
