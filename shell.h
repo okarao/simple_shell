@@ -11,7 +11,12 @@
 
 char *shell_name;
 extern char **environ;
+
+
+#define BUFFER_SIZE 1024
 /* Function Prototypes */
+void run_shell(void);
+void execute_command(char *command);
 int _printenv(void);
 char *_strdup(const char *string);
 int cmd_read(char *s, size_t __attribute__((unused)) file_stream);
