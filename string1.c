@@ -5,7 +5,7 @@ char *_strcpy(char *dest, char *src)
 	int i = 0;
 
 	if (dest == src || src == NULL)
-		return dest;
+		return (dest);
 
 	while (src[i])
 	{
@@ -14,36 +14,37 @@ char *_strcpy(char *dest, char *src)
 	}
 
 	dest[i] = '\0';
-	return dest;
+	return (dest);
 }
 
 char *_strdup(const char *str)
 {
-	int length = 0;
+	int length = 0, i;
 	char *ret;
 
 	if (str == NULL)
-		return NULL;
+		return (NULL);
 
 	while (str[length])
 		length++;
 
 	ret = malloc(sizeof(char) * (length + 1));
 	if (ret == NULL)
-		return NULL;
+		return (NULL);
 
-	for (int i = 0; i <= length; i++)
+	for (i = 0; i <= length; i++)
 		ret[i] = str[i];
 
-	return ret;
+	return (ret);
 }
 
 void _puts(char *str)
 {
+	int i;
 	if (str == NULL)
 		return;
 
-	for (int i = 0; str[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 		_putchar(str[i]);
 }
 
@@ -61,6 +62,6 @@ int _putchar(char c)
 	if (c != BUF_FLUSH)
 		buf[i++] = c;
 
-	return 1;
+	return (1);
 }
 
