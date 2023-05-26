@@ -1,4 +1,11 @@
 #include "shell.h"
+/**
+ * _strcpy - copy string
+ * @dest: the destination string
+ * @src: the source string
+ *
+ * Return: pointer to the new string
+ */
 
 char *_strcpy(char *dest, char *src)
 {
@@ -16,6 +23,12 @@ char *_strcpy(char *dest, char *src)
 	dest[i] = '\0';
 	return (dest);
 }
+/**
+ * _strdup - duplicate string
+ * @str: the string pointer to be duplicated
+ *
+ * Return: pointer to duplicated string
+ */
 
 char *_strdup(const char *str)
 {
@@ -37,20 +50,32 @@ char *_strdup(const char *str)
 
 	return (ret);
 }
+/**
+ * _puts - prints a string
+ * * @str: pointer to the string
+ *
+ * Return: Nothing
+ */
 
 void _puts(char *str)
 {
 	int i;
+
 	if (str == NULL)
 		return;
 
 	for (i = 0; str[i] != '\0'; i++)
 		_putchar(str[i]);
 }
-
+/**
+ * _putchar - prints character
+ * @c: the character to be printed
+ *
+ * Return: 1 on success
+ */
 int _putchar(char c)
 {
-	static int i = 0;
+	static int i;
 	static char buf[WRITE_BUF_SIZE];
 
 	if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)

@@ -13,11 +13,11 @@ list_t *add_node(list_t **head, const char *str, int num)
 	list_t *new_head;
 
 	if (!head)
-		return NULL;
+		return (NULL);
 
 	new_head = malloc(sizeof(list_t));
 	if (!new_head)
-		return NULL;
+		return (NULL);
 
 	_memset((void *)new_head, 0, sizeof(list_t));
 	new_head->num = num;
@@ -28,13 +28,13 @@ list_t *add_node(list_t **head, const char *str, int num)
 		if (!new_head->str)
 		{
 			free(new_head);
-			return NULL;
+			return (NULL);
 		}
 	}
 
 	new_head->next = *head;
 	*head = new_head;
-	return new_head;
+	return (new_head);
 }
 
 /**
@@ -50,12 +50,12 @@ list_t *add_node_end(list_t **head, const char *str, int num)
 	list_t *new_node, *node;
 
 	if (!head)
-		return NULL;
+		return (NULL);
 
 	node = *head;
 	new_node = malloc(sizeof(list_t));
 	if (!new_node)
-		return NULL;
+		return (NULL);
 
 	_memset((void *)new_node, 0, sizeof(list_t));
 	new_node->num = num;
@@ -66,7 +66,7 @@ list_t *add_node_end(list_t **head, const char *str, int num)
 		if (!new_node->str)
 		{
 			free(new_node);
-			return NULL;
+			return (NULL);
 		}
 	}
 
@@ -79,7 +79,7 @@ list_t *add_node_end(list_t **head, const char *str, int num)
 	else
 		*head = new_node;
 
-	return new_node;
+	return (new_node);
 }
 
 /**
@@ -100,7 +100,7 @@ size_t print_list_str(const list_t *h)
 		i++;
 	}
 
-	return i;
+	return (i);
 }
 
 /**
@@ -116,7 +116,7 @@ int delete_node_at_index(list_t **head, unsigned int index)
 	unsigned int i = 0;
 
 	if (!head || !*head)
-		return 0;
+		return (0);
 
 	if (!index)
 	{
@@ -124,7 +124,7 @@ int delete_node_at_index(list_t **head, unsigned int index)
 		*head = (*head)->next;
 		free(node->str);
 		free(node);
-		return 1;
+		return (1);
 	}
 
 	node = *head;
@@ -135,7 +135,7 @@ int delete_node_at_index(list_t **head, unsigned int index)
 			prev_node->next = node->next;
 			free(node->str);
 			free(node);
-			return 1;
+			return (1);
 		}
 
 		i++;
@@ -143,7 +143,7 @@ int delete_node_at_index(list_t **head, unsigned int index)
 		node = node->next;
 	}
 
-	return 0;
+	return (0);
 }
 
 /**
